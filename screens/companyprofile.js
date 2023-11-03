@@ -12,13 +12,13 @@ import {
   TextArea,
 } from "native-base";
 
-const CompanyProfile = () => {
+const CompanyProfile = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }} backgroundColor="white">
       <ScrollView>
         <Box
           px={5}
-          py={8}
+          py={7}
           borderBottomRadius={20}
           alignItems="left"
           backgroundColor="error.500"
@@ -73,18 +73,13 @@ const CompanyProfile = () => {
             </Text>
             <Input variant="outline" placeholder="Location" />
             <Text fontSize="md" bold>
-              {" "}
               Email Address
             </Text>
-            <Input variant="outline" placeholder="Round" />
+            <Input variant="outline" placeholder="Email Address" />
             <Text fontSize="md" bold>
               Phone Number
             </Text>
             <Input variant="outline" placeholder="Phone Number" />
-            <Text fontSize="md" bold>
-              Company Profile
-            </Text>
-            <Input variant="outline" placeholder="Company Profile" />
             <Text fontSize="md" bold>
               Type
             </Text>
@@ -102,7 +97,7 @@ const CompanyProfile = () => {
             size="xs"
             variant="subtle"
             colorScheme="success"
-            onPress={() => console.log("Save")}
+            onPress={() => navigation.navigate('UserProfile')}
           >
             Save
           </Button>
