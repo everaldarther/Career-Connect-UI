@@ -10,23 +10,24 @@ import {
   Box,
   HStack,
   TextArea,
+  Center,
+  Image,
+  Badge,
 } from "native-base";
 
 const UserProfile = ({ navigation }) => {
   return (
-<View style={{ flex: 1 }} backgroundColor="white">
+    <View style={{ flex: 1 }} backgroundColor="white">
       <ScrollView>
         <Box
+          shadow={5}
           px={5}
           py={7}
           borderBottomRadius={20}
-          alignItems="left"
+          alignItems="left"   
           backgroundColor="error.500"
         >
-          <Avatar
-            size="lg"
-            source={require('../assets/avataruser.png')}
-          />
+          <Avatar size="lg" source={require("../assets/avataruser.png")} />
 
           <Box py={3}>
             <Text fontSize="xl" fontWeight="bold" color="white">
@@ -73,10 +74,6 @@ const UserProfile = ({ navigation }) => {
             </Text>
             <Input variant="outline" placeholder="Date of birth" />
             <Text fontSize="md" bold>
-              Gender
-            </Text>
-            <Input variant="outline" placeholder="Gender" />
-            <Text fontSize="md" bold>
               Email Address
             </Text>
             <Input variant="outline" placeholder="Email Address" />
@@ -93,27 +90,76 @@ const UserProfile = ({ navigation }) => {
             </Text>
             <TextArea placeholder="About Me"></TextArea>
             <Text fontSize="md" bold>
-              Education
+              Level of Education
             </Text>
-            <TextArea placeholder="Education"></TextArea>
+            <TextArea placeholder="Level of Education"></TextArea>
+            {/* Skill */}
             <Text fontSize="md" bold>
               Skill
             </Text>
-            <TextArea placeholder="Skill"></TextArea>
+            <Box py={3} borderTopColor="#d4d4d4" borderTopWidth={1}>
+              <Center>
+                <HStack space={3} py={3}>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
+                    <Text fontSize="xs">
+                      Teamwork
+                    </Text>
+                  </Badge>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
+                    <Text fontSize="xs">
+                      Leadership
+                    </Text>
+                  </Badge>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
+                    <Text fontSize="xs">
+                      Visioner
+                    </Text>
+                  </Badge>
+                </HStack>
+                <HStack space={3} py={3}>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
+                    <Text fontSize="xs">
+                      Consistent
+                    </Text>
+                  </Badge>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
+                    <Text fontSize="xs">
+                      Target oriented
+                    </Text>
+                  </Badge>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
+                    <Text fontSize="xs">
+                      Good Communication
+                    </Text>
+                  </Badge>
+                </HStack>
+              </Center>
+            </Box>
+
             <Text fontSize="md" bold>
               Resume
             </Text>
-            <TextArea placeholder="Resume"></TextArea>
+            <Box borderRadius={3} borderColor="#d4d4d4" borderWidth={1} py={2}>
+              <Center py={8}>
+                <Image
+                  source={require("../assets/Icons/upload.png")}
+                  alt="Alternate Text"
+                  size={4}
+                />
+                Upload CV/Resume
+              </Center>
+            </Box>
           </VStack>
         </Box>
 
+        {/* Button */}
         <HStack p={5} space={5}>
           <Button
             w="30%"
             size="xs"
             variant="subtle"
             colorScheme="success"
-            onPress={() => console.log("Save")}
+            onPress={() => navigation.navigate("JobDetail")}
           >
             Save
           </Button>
@@ -122,7 +168,7 @@ const UserProfile = ({ navigation }) => {
             size="xs"
             variant="subtle"
             colorScheme="danger"
-            onPress={() => navigation.navigate('CompanyProfile')}
+            onPress={() => navigation.navigate("CompanyProfile")}
           >
             Cancel
           </Button>

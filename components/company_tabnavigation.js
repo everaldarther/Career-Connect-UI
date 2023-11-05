@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { Image } from 'react-native';
 
-const CompanyTabsNavigation = () => {
+const CompanyTabsNavigation = ({ navigation }) => {
     return (
         <View style={styles.container} >
             <TouchableOpacity style={styles.tab}>

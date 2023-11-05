@@ -17,16 +17,14 @@ const CompanyProfile = ({ navigation }) => {
     <View style={{ flex: 1 }} backgroundColor="white">
       <ScrollView>
         <Box
+          shadow={5}
           px={5}
           py={7}
           borderBottomRadius={20}
           alignItems="left"
           backgroundColor="error.500"
         >
-          <Avatar
-            size="lg"
-            source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-          />
+          <Avatar size="lg" source={require("../assets/telkomsigma.png")} />
 
           <Box py={3}>
             <Text fontSize="xl" fontWeight="bold" color="white">
@@ -103,10 +101,10 @@ const CompanyProfile = ({ navigation }) => {
           </Button>
           <Button
             w="30%"
-            onPress={() => console.log("Cancel")}
             size="xs"
             variant="subtle"
             colorScheme="danger"
+            onPress={() => console.log("Cancel")}
           >
             Cancel
           </Button>
