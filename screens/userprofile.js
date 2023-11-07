@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { Pressable, ScrollView, View } from "react-native";
 import UserTabsNavigation from "../components/user_tabnavigation";
 import {
   Text,
@@ -24,7 +24,7 @@ const UserProfile = ({ navigation }) => {
           px={5}
           py={7}
           borderBottomRadius={20}
-          alignItems="left"   
+          alignItems="left"
           backgroundColor="error.500"
         >
           <Avatar size="lg" source={require("../assets/avataruser.png")} />
@@ -85,62 +85,94 @@ const UserProfile = ({ navigation }) => {
               Location
             </Text>
             <Input variant="outline" placeholder="Location" />
-            <Text fontSize="md" bold>
-              About Me
-            </Text>
+            <HStack>
+              <Image
+                source={require("../assets/Icons/aboutme.png")}
+                alt="Alternate Text"
+                size={4}
+              />
+              <Text fontSize="md" bold px={2}>
+                About Me
+              </Text>
+            </HStack>
             <TextArea placeholder="About Me"></TextArea>
-            <Text fontSize="md" bold>
-              Level of Education
-            </Text>
+            <HStack>
+              <Image
+                source={require("../assets/Icons/education.png")}
+                alt="Alternate Text"
+                size={4}
+              />
+              <Text fontSize="md" bold px={2}>
+                Education
+              </Text>
+            </HStack>
             <TextArea placeholder="Level of Education"></TextArea>
             {/* Skill */}
-            <Text fontSize="md" bold>
-              Skill
-            </Text>
+            <HStack>
+              <Image
+                source={require("../assets/Icons/skill.png")}
+                alt="Alternate Text"
+                size={4}
+              />
+              <Text fontSize="md" bold px={2}>
+                Skill
+              </Text>
+            </HStack>
             <Box py={3} borderTopColor="#d4d4d4" borderTopWidth={1}>
               <Center>
                 <HStack space={3} py={3}>
-                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="xs">
-                      Teamwork
-                    </Text>
+                  <Badge
+                    bg={"#EAEAEA"}
+                    rounded={10}
+                    variant={"solid"}
+                    size="10"
+                  >
+                    <Text fontSize="md">Teamwork</Text>
                   </Badge>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="xs">
-                      Leadership
-                    </Text>
+                    <Text fontSize="md">Leadership</Text>
                   </Badge>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="xs">
-                      Visioner
-                    </Text>
+                    <Text fontSize="md">Target oriented</Text>
                   </Badge>
                 </HStack>
-                <HStack space={3} py={3}>
+                <HStack space={2} py={3}>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="xs">
-                      Consistent
-                    </Text>
+                    <Text fontSize="md">Consistent</Text>
                   </Badge>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="xs">
-                      Target oriented
-                    </Text>
+                    <Text fontSize="md">Visioner</Text>
                   </Badge>
-                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="xs">
+                  <Badge
+                    bg={"#EAEAEA"}
+                    rounded={10}
+                    variant={"solid"}
+                    size="md"
+                  >
+                    <Text
+                      fontSize="md"
+                      onPress={() => console.log("Good Communication")}
+                    >
                       Good Communication
                     </Text>
                   </Badge>
                 </HStack>
+                <Text color="lightBlue.700" paddingTop={5}>See More</Text>
               </Center>
             </Box>
 
-            <Text fontSize="md" bold>
-              Resume
-            </Text>
+            <HStack>
+              <Image
+                source={require("../assets/Icons/resume.png")}
+                alt="Alternate Text"
+                size={4}
+              />
+              <Text fontSize="md" bold px={2}>
+                Resume
+              </Text>
+            </HStack>
             <Box borderRadius={3} borderColor="#d4d4d4" borderWidth={1} py={2}>
-              <Center py={8}>
+              <Center py={6}>
                 <Image
                   source={require("../assets/Icons/upload.png")}
                   alt="Alternate Text"

@@ -16,36 +16,46 @@ const JobDetail = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }} backgroundColor="white">
       <ScrollView>
-        <Center paddingTop={20}>
-          <Avatar size="xl" source={require("../assets/avataruser.png")} />
-        </Center>
-        <Box
-          shadow={5}
-          py={4}
-          alignItems="center"
-          backgroundColor="error.500"
-        >
-          <Box py={2}>
-            <Text  fontSize="md" fontWeight="bold" color="white">
-              UI/UX Design
-            </Text>
-            <HStack space={3}>
-              <Text fontSize="md" color="white" alignItems="Left">
-                Google
+        <Box py={10} />
+        <Box shadow={5} height="120" backgroundColor="error.500">
+          <Center>
+            <Avatar
+              size="xl"
+              mt="-50"
+              borderColor={"blueGray.900"}
+              source={require("../assets/telkomsigma.png")}
+            />
+          </Center>
+
+          <Center>
+            <Box>
+              <Text
+                fontSize="md"
+                fontWeight="bold"
+                color="white"
+                textAlign="center"
+                py={2}
+              >
+                UI/UX Design
               </Text>
-              <Text fontSize="md" color="white" alignItems="center">
-              • Surabaya
-              </Text>
-              <Text fontSize="md" color="white" alignItems="Right">
-               • 1 day ago
-              </Text>
-            </HStack>
-          </Box>
+              <HStack space={3}>
+                <Text fontSize="md" color="white">
+                  Telkom Sigma
+                </Text>
+                <Text fontSize="md" color="white">
+                  • Surabaya
+                </Text>
+                <Text fontSize="md" color="white">
+                  • 1 day ago
+                </Text>
+              </HStack>
+            </Box>
+          </Center>
         </Box>
 
         <Box px={6} py={5}>
           <Heading paddingBottom={2}>Job Description</Heading>
-          <Text textAlign="left">
+          <Text textAlign="justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do dsa
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
