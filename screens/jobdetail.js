@@ -1,9 +1,10 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, TouchableOpacity, Image } from "react-native";
 import UserTabsNavigation from "../components/user_tabnavigation";
 import {
   Text,
   Button,
+  Container,
   VStack,
   HStack,
   Avatar,
@@ -16,8 +17,17 @@ const JobDetail = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }} backgroundColor="white">
       <ScrollView>
-        <Box py={10} />
-        <Box shadow={5} height="120" backgroundColor="error.500">
+        <Container paddingTop={45} py={10}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("CompanyProfile")}
+          >
+            <Image
+              source={require("../assets/Icons/back.png")}
+              style={{ width: 19, height: 15, marginLeft: 20 }}
+            />
+          </TouchableOpacity>
+        </Container>
+        <Box shadow={5} height="130" backgroundColor="error.500">
           <Center>
             <Avatar
               size="xl"

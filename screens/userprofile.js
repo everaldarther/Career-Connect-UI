@@ -38,7 +38,7 @@ const UserProfile = ({ navigation }) => {
             </Text>
           </Box>
 
-          <HStack space={190}>
+          <HStack space={210}>
             <Button
               variant="solid"
               size="xs"
@@ -89,7 +89,7 @@ const UserProfile = ({ navigation }) => {
               <Image
                 source={require("../assets/Icons/aboutme.png")}
                 alt="Alternate Text"
-                size={4}
+                size={6}
               />
               <Text fontSize="md" bold px={2}>
                 About Me
@@ -100,7 +100,7 @@ const UserProfile = ({ navigation }) => {
               <Image
                 source={require("../assets/Icons/education.png")}
                 alt="Alternate Text"
-                size={4}
+                size={6}
               />
               <Text fontSize="md" bold px={2}>
                 Education
@@ -112,7 +112,7 @@ const UserProfile = ({ navigation }) => {
               <Image
                 source={require("../assets/Icons/skill.png")}
                 alt="Alternate Text"
-                size={4}
+                size={6}
               />
               <Text fontSize="md" bold px={2}>
                 Skill
@@ -127,21 +127,40 @@ const UserProfile = ({ navigation }) => {
                     variant={"solid"}
                     size="10"
                   >
-                    <Text fontSize="md">Teamwork</Text>
+                    <Text fontSize="md" onPress={() => console.log("Teamwork")}>
+                      Teamwork
+                    </Text>
                   </Badge>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="md">Leadership</Text>
+                    <Text
+                      fontSize="md"
+                      onPress={() => console.log("Leadership")}
+                    >
+                      Leadership
+                    </Text>
                   </Badge>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="md">Target oriented</Text>
+                    <Text
+                      fontSize="md"
+                      onPress={() => console.log("Target oriented")}
+                    >
+                      Target oriented
+                    </Text>
                   </Badge>
                 </HStack>
                 <HStack space={2} py={3}>
-                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="md">Consistent</Text>
+                  <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"}>
+                    <Text
+                      fontSize="md"
+                      onPress={() => console.log("Consistent")}
+                    >
+                      Consistent
+                    </Text>
                   </Badge>
                   <Badge bg={"#EAEAEA"} rounded={10} variant={"solid"} size="">
-                    <Text fontSize="md">Visioner</Text>
+                    <Text fontSize="md" onPress={() => console.log("Visioner")}>
+                      Visioner
+                    </Text>
                   </Badge>
                   <Badge
                     bg={"#EAEAEA"}
@@ -157,7 +176,9 @@ const UserProfile = ({ navigation }) => {
                     </Text>
                   </Badge>
                 </HStack>
-                <Text color="lightBlue.700" paddingTop={5}>See More</Text>
+                <Text color="lightBlue.700" paddingTop={5}>
+                  See More
+                </Text>
               </Center>
             </Box>
 
@@ -165,7 +186,7 @@ const UserProfile = ({ navigation }) => {
               <Image
                 source={require("../assets/Icons/resume.png")}
                 alt="Alternate Text"
-                size={4}
+                size={6}
               />
               <Text fontSize="md" bold px={2}>
                 Resume

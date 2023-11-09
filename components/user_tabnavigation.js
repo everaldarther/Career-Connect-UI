@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderTopWidth: 1,
         borderTopColor: '#ccc',
-        height: 40,
+        height: 55,
     },
     tab: {
         alignItems: 'center',

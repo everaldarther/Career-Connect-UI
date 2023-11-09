@@ -4,6 +4,7 @@ import CompanyTabsNavigation from "../components/company_tabnavigation";
 import {
   Text,
   Input,
+  Image,
   Button,
   VStack,
   Avatar,
@@ -35,7 +36,7 @@ const CompanyProfile = ({ navigation }) => {
             </Text>
           </Box>
 
-          <HStack space={190}>
+          <HStack space={220}>
             <Button
               variant="solid"
               size="xs"
@@ -46,17 +47,18 @@ const CompanyProfile = ({ navigation }) => {
             >
               Change Image
             </Button>
-            <Button
-              variant="solid"
-              size="xs"
-              borderRadius={6}
-              colorScheme={"light"}
-              bgColor={"#fca5a5"}
-              // leftIcon={}
-              onPress={() => console.log("Logout")}
-            >
-              Logout
-            </Button>
+            <HStack>
+              <Button
+                variant="solid"
+                size="xs"
+                borderRadius={6}
+                colorScheme={"light"}
+                bgColor={"#fca5a5"}
+                onPress={() => console.log("Logout")}
+              >
+                Logout
+              </Button>
+            </HStack>
           </HStack>
         </Box>
 
@@ -95,7 +97,7 @@ const CompanyProfile = ({ navigation }) => {
             size="xs"
             variant="subtle"
             colorScheme="success"
-            onPress={() => navigation.navigate('UserProfile')}
+            onPress={() => navigation.navigate("UserProfile")}
           >
             Save
           </Button>
