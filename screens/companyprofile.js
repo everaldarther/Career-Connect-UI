@@ -1,12 +1,11 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
+import ProfileBox from "../components/profilebox";
 import FormInput from "../components/company_profileforminput";
 import CompanyTabsNavigation from "../components/company_tabnavigation";
 import {
-  Text,
   Button,
   VStack,
-  Avatar,
   Box,
   HStack,
 } from "native-base";
@@ -15,50 +14,13 @@ const CompanyProfile = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }} backgroundColor="white">
       <ScrollView>
-        <Box
-          shadow={5}
-          px={5}
-          py={7}
-          borderBottomRadius={20}
-          alignItems="left"
-          backgroundColor="error.500"
-        >
-          <Avatar size="lg" source={require("../assets/telkomsigma.png")} />
-
-          <Box py={3}>
-            <Text fontSize="xl" fontWeight="bold" color="white">
-              Telkom Sigma
-            </Text>
-            <Text fontSize="md" color="white">
-              Surabaya, Indonesia
-            </Text>
-          </Box>
-
-          <HStack space={220}>
-            <Button
-              variant="solid"
-              size="xs"
-              borderRadius={6}
-              colorScheme={"light"}
-              bgColor={"#fca5a5"}
-              onPress={() => console.log("ChangeImage")}
-            >
-              Change Image
-            </Button>
-            <HStack>
-              <Button
-                variant="solid"
-                size="xs"
-                borderRadius={6}
-                colorScheme={"light"}
-                bgColor={"#fca5a5"}
-                onPress={() => console.log("Logout")}
-              >
-                Logout
-              </Button>
-            </HStack>
-          </HStack>
-        </Box>
+      <ProfileBox
+          title="Telkom Sigma"
+          subtitle="Surabaya, Indonesia"
+          avatarSource={require("../assets/telkomsigma.png")}
+          onPressChangeImage={() => console.log("ChangeImage")}
+          onPressLogout={() => console.log("Logout")}
+        />
 
         <Box paddingTop="4">
           <VStack space={3}>

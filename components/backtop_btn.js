@@ -15,4 +15,4 @@ const TopBackButton = ({ navigation }) => {
   );
 };
 
-export default TopBackButtons;
+export default TopBackButton;
