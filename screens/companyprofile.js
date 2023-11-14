@@ -1,5 +1,6 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
+import TextInputField from "../components/user_profiletextinput";
 import CompanyTabsNavigation from "../components/company_tabnavigation";
 import {
   Text,

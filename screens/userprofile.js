@@ -1,5 +1,6 @@
 import React from "react";
-import { Pressable, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
+import TextInputField from "../components/user_profiletextinput";
 import UserTabsNavigation from "../components/user_tabnavigation";
 import {
   Text,
@@ -65,26 +66,21 @@ const UserProfile = ({ navigation }) => {
 
         <Box paddingTop="4">
           <VStack space="2" px={6}>
-            <Text fontSize="md" bold>
-              Full Name
-            </Text>
-            <Input variant="outline" placeholder="Full Name" />
-            <Text fontSize="md" bold>
-              Date of birth
-            </Text>
-            <Input variant="outline" placeholder="Date of birth" />
-            <Text fontSize="md" bold>
-              Email Address
-            </Text>
-            <Input variant="outline" placeholder="Email Address" />
-            <Text fontSize="md" bold>
-              Phone Number
-            </Text>
-            <Input variant="outline" placeholder="Phone Number" />
-            <Text fontSize="md" bold>
-              Location
-            </Text>
-            <Input variant="outline" placeholder="Location" />
+            <TextInputField label="Full Name" placeholder="Enter Full Name" />
+            <TextInputField
+              label="Date of Birth"
+              placeholder="Enter Date of Birth"
+            />
+            <TextInputField
+              label="Email Address"
+              placeholder="Enter Email Address"
+            />
+            <TextInputField
+              label="Phone Number"
+              placeholder="Enter Phone Number"
+            />
+            <TextInputField label="Location" placeholder="Enter Location" />
+
             <HStack>
               <Image
                 source={require("../assets/Icons/aboutme.png")}
