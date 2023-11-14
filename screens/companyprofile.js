@@ -1,17 +1,14 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
-import TextInputField from "../components/user_profiletextinput";
+import FormInput from "../components/company_profileforminput";
 import CompanyTabsNavigation from "../components/company_tabnavigation";
 import {
   Text,
-  Input,
-  Image,
   Button,
   VStack,
   Avatar,
   Box,
   HStack,
-  TextArea,
 } from "native-base";
 
 const CompanyProfile = ({ navigation }) => {
@@ -64,31 +61,13 @@ const CompanyProfile = ({ navigation }) => {
         </Box>
 
         <Box paddingTop="4">
-          <VStack space="2" px={6}>
-            <Text fontSize="md" bold>
-              Company Name
-            </Text>
-            <Input variant="outline" placeholder="Company Name" />
-            <Text fontSize="md" bold>
-              Location
-            </Text>
-            <Input variant="outline" placeholder="Location" />
-            <Text fontSize="md" bold>
-              Email Address
-            </Text>
-            <Input variant="outline" placeholder="Email Address" />
-            <Text fontSize="md" bold>
-              Phone Number
-            </Text>
-            <Input variant="outline" placeholder="Phone Number" />
-            <Text fontSize="md" bold>
-              Type
-            </Text>
-            <Input variant="outline" placeholder="Company Type" />
-            <Text fontSize="md" bold>
-              About Company
-            </Text>
-            <TextArea placeholder="About Company"></TextArea>
+          <VStack space={3}>
+            <FormInput label="Company Name" placeholder="Company Name" />
+            <FormInput label="Location" placeholder="Location" />
+            <FormInput label="Email Address" placeholder="Email Address" />
+            <FormInput label="Phone Number" placeholder="Phone Number" />
+            <FormInput label="Type" placeholder="Company Type" />
+            <FormInput label="About Company" placeholder="About Company" />
           </VStack>
         </Box>
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, Input, VStack } from "native-base";
 
-const TextInputField = ({ label, placeholder }) => {
+const FormInput = ({ label, placeholder }) => {
   return (
-    <VStack space={3}>
+    <VStack space="2" px={6}>
       <Text fontSize="md" bold>
         {label}
       </Text>
@@ -12,4 +12,4 @@ const TextInputField = ({ label, placeholder }) => {
   );
 };
 
-export default TextInputField;
+export default FormInput;

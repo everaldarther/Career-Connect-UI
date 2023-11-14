@@ -1,10 +1,9 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
-import TextInputField from "../components/user_profiletextinput";
+import FormInput from "../components/user_profileforminput";
 import UserTabsNavigation from "../components/user_tabnavigation";
 import {
   Text,
-  Input,
   Button,
   VStack,
   Avatar,
@@ -66,20 +65,20 @@ const UserProfile = ({ navigation }) => {
 
         <Box paddingTop="4">
           <VStack space="2" px={6}>
-            <TextInputField label="Full Name" placeholder="Enter Full Name" />
-            <TextInputField
+            <FormInput label="Full Name" placeholder="Enter Full Name" />
+            <FormInput
               label="Date of Birth"
               placeholder="Enter Date of Birth"
             />
-            <TextInputField
+            <FormInput
               label="Email Address"
               placeholder="Enter Email Address"
             />
-            <TextInputField
+            <FormInput
               label="Phone Number"
               placeholder="Enter Phone Number"
             />
-            <TextInputField label="Location" placeholder="Enter Location" />
+            <FormInput label="Location" placeholder="Enter Location" />
 
             <HStack>
               <Image
